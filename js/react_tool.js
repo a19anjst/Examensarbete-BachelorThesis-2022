@@ -1,29 +1,46 @@
+
+
 class ReactApp extends React.Component {
-  constructor(props) {
-      super(props);
-  }
-  editor(){
-    return(
-      <Modal.Dialog>
-  <Modal.Header closeButton>
-    <Modal.Title>Modal title</Modal.Title>
-  </Modal.Header>
-
-  <Modal.Body>
-    <p>Modal body text goes here.</p>
-  </Modal.Body>
-
-  <Modal.Footer>
-    <Button variant="secondary">Close</Button>
-    <Button variant="primary">Save changes</Button>
-  </Modal.Footer>
-</Modal.Dialog>
-    )
+  constructor() {
+    super();
+    this.state = {
+      show: false
+    };
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
-  render(){
-      return (
-          this.editor()
-      );
-  }
+  showModal = () => {
+    this.setState({ show: true });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+  render() {
+  return (
+    <main>
+       <Modal show={this.state.show} handleClose={this.hideModal}>
+         <p>Modal</p>
+       </Modal>
+       <button type="button" onClick={this.showModal}>
+         Open
+       </button>
+     </main>
+  );
 }
+}
+const Modal = ({ handleClose, show, children }) => {
+  const showHideClassName = show ? "modal display-block" : "modal display-none";
+
+  return (
+    <div className={showHideClassName}>
+      <section className="modal-main">
+        {children}
+        <button type="button" onClick={handleClose}>
+          Close
+        </button>
+      </section>
+    </div>
+  );
+};
