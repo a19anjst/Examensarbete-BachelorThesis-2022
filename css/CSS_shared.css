@@ -92,27 +92,6 @@ body{
   transform: scale(1.1);
   }
 
-#reactapp{
-  float: left;
-}
-
-.modal-main {
-  position:absolute;
-  background: white;
-  width: 300px;
-  margin-left: 10px;
-  height: 500px;
-  padding: 10px;
-}
-
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
-}
-
   #menu{
     background-color: white;
     position: absolute;

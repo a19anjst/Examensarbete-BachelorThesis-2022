@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/CSS_shared.css">
+  <link rel="stylesheet" href="css/reacttoolcss.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
