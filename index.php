@@ -10,8 +10,13 @@
       @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
+
     </style>
-    <script src="js/JS_shared.js"></script>
+    <script src="js/JS_shared.js" defer></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script type="text/babel" src="react_tool.js"></script>
   </head>
   <body>
     <nav id="menu">
@@ -23,7 +28,7 @@
     <div class="title" id="title_index">
       <span id="titletext">lorem ipsum</span>
     </div>
-
+<div id="reactapp"></div>
   <div class="wrap">
     <div class="outerbox">
     <div class="box box1">
