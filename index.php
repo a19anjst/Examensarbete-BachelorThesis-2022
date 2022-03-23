@@ -16,7 +16,7 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    <script type="text/babel" src="react_tool.js"></script>
+    <script type="text/babel" src="JS/react_tool.js"></script>
   </head>
   <body>
     <nav id="menu">
@@ -28,7 +28,7 @@
     <div class="title" id="title_index">
       <span id="titletext">lorem ipsum</span>
     </div>
-<div id="reactapp"></div>
+    <div id="reactapp"></div>
   <div class="wrap">
     <div class="outerbox">
     <div class="box box1">
@@ -40,6 +40,7 @@
           <a href="advice.php" class="homelinks"><li class="boxlist">lorem ipsum</li></a>
           <a href="equality.php" class="homelinks"><li class="boxlist">lorem ipsum</li></a>
           <a href="cooperation.php" class="homelinks"><li class="boxlist">lorem ipsum</li></a>
+
       </ul>
       </a>
     </div>
@@ -77,5 +78,8 @@
     </div>
   </div>
 </div>
+<script type="text/babel">
+ReactDOM.render(<ReactApp/>, document.getElementById("reactapp"));
+</script>
   </body>
 </html>
