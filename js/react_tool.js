@@ -8,7 +8,15 @@ class ReactApp extends React.Component {
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
+
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick() {
+      this.setState(prevState => ({
+        show: !prevState.show
+      }));
+    }
 
   showModal = () => {
     this.setState({ show: true });
@@ -23,9 +31,9 @@ class ReactApp extends React.Component {
        <Modal show={this.state.show} handleClose={this.hideModal}>
          <p>Modal</p>
        </Modal>
-       <button type="button" onClick={this.showModal}>
-         Open
-       </button>
+       <button id="buttonOpen" onClick={this.handleClick}>
+        {this.state.show ? 'Textverktyg' : 'Textverktyg'}
+      </button>
      </main>
   );
 }
@@ -37,9 +45,6 @@ const Modal = ({ handleClose, show, children }) => {
     <div className={showHideClassName}>
       <section className="modal-main">
         {children}
-        <button type="button" onClick={handleClose}>
-          Close
-        </button>
       </section>
     </div>
   );
