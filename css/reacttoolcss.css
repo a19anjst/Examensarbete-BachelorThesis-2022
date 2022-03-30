@@ -1,5 +1,6 @@
 #reactapp{
   float: left;
+  position: absolute;
 }
 
 .modal-main {

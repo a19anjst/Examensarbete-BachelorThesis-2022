@@ -1,7 +1,7 @@
 {
   "name": "examensarbete-bachelorthesis-2022",
   "version": "1.0.0",
-  "description": "This is the code made for the technical experiment that is part of the bachelor thesis written by Anja Stenbom, year 2022, spring",
+  "description": "package",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,13 +10,14 @@
     "type": "git",
     "url": "git+https://github.com/a19anjst/Examensarbete-BachelorThesis-2022.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Anja Stenbom",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/a19anjst/Examensarbete-BachelorThesis-2022/issues"
   },
-  "homepage": {"https://github.com/a19anjst/Examensarbete-BachelorThesis-2022#readme"
-  },
-  "type": "module"
+  "homepage": "https://github.com/a19anjst/Examensarbete-BachelorThesis-2022#readme",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
 }

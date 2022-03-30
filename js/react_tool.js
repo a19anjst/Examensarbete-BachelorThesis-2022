@@ -36,6 +36,7 @@ class ReactApp extends React.Component {
   return (
     <main>
        <Modal show={this.state.show} handleClose={this.hideModal}>
+          {this.props.children}
          <p id="reacttool_title">Textstorlek: </p>
          <ReactStyling></ReactStyling>
        </Modal>
