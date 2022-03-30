@@ -16,5 +16,7 @@
   "bugs": {
     "url": "https://github.com/a19anjst/Examensarbete-BachelorThesis-2022/issues"
   },
-  "homepage": "https://github.com/a19anjst/Examensarbete-BachelorThesis-2022#readme"
+  "homepage": {"https://github.com/a19anjst/Examensarbete-BachelorThesis-2022#readme"
+  },
+  "type": "module"
 }
