@@ -35,15 +35,14 @@ class ReactApp extends React.Component {
   render() {
   return (
     <main>
-       <Modal show={this.state.show} handleClose={this.hideModal}>
-          {this.props.children}
-         <p id="reacttool_title">Textstorlek: </p>
-         <ReactStyling></ReactStyling>
-       </Modal>
        <button id="buttonOpen" onClick={this.handleClick}>
         {this.state.show ? 'Ändra text utseende' : 'Ändra text utseende'}
       </button>
-      <p>  </p>
+      <Modal show={this.state.show} handleClose={this.hideModal}>
+         {this.props.children}
+        <p id="reacttool_title">Textstorlek: </p>
+        <ReactStyling></ReactStyling>
+      </Modal>
      </main>
   );
 }
