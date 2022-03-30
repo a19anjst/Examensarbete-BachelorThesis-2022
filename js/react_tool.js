@@ -3,20 +3,19 @@ class ReactApp extends React.Component {
   constructor() {
     super();
     this.state = {
-      show: false,
+      show: false
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
 
     this.handleClick = this.handleClick.bind(this);
-  }
-  handleChange = e => {
-    const { name, value } = e.target;
+    this.onChangeValue = this.onChangeValue.bind(this);
+   }
 
-    this.setState({
-      [name]: value
-    });
-  }
+   onChangeValue(event) {
+     alert('Fontsize: ' + event.target.value);
+     event.preventDefault();
+   }
 
   handleClick() {
       this.setState(prevState => ({
@@ -41,6 +40,11 @@ class ReactApp extends React.Component {
       <Modal show={this.state.show} handleClose={this.hideModal}>
          {this.props.children}
         <p id="reacttool_title">Textstorlek: </p>
+        <div onChange={this.onChangeValue}>
+        <input type="radio" value="16px" name="fontsize" /> 16px
+        <input type="radio" value="18px" name="fontsize" /> 18px
+        <input type="radio" value="20px" name="fontsize" /> 20px
+      </div>
         <ReactStyling></ReactStyling>
       </Modal>
      </main>

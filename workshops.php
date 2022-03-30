@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+
+require_once 'db_connection.php';
+$result = mysqli_query($conn,"SELECT* FROM texttable order by RAND() LIMIT 1");
+$row= mysqli_fetch_array($result);
+ ?>
 <html lang="sv">
   <head>
   <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
@@ -35,31 +41,9 @@
     <div class="textblock" id="textblock1">
         <div class="content_second">
           <div class="content_dir1">
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p></div>
-            <div><p>Lorem ipsum dolor sit amet:</p></div>
-            <ul>
-                <li class="boxlist">Lorem ipsum dolor</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-            </ul>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p></div>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur:</p></div>
-            <ul>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-            </ul>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p></div>
-            <div><p>Lorem ipsum dolor sit amet</p></div>
+            <?php
+              echo $row[2];
+            ?>
           </div>
         </div>
 
