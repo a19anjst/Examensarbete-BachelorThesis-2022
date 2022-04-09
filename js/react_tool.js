@@ -1,4 +1,8 @@
 
+const TwentyPx = {
+  fontsize: "20px"
+}
+
 class ReactApp extends React.Component {
   constructor() {
     super();
@@ -40,10 +44,10 @@ class ReactApp extends React.Component {
       <Modal show={this.state.show} handleClose={this.hideModal}>
          {this.props.children}
         <p id="reacttool_title">Textstorlek: </p>
-        <div onChange={this.onChangeValue}>
-        <input type="radio" value="16px" name="fontsize" /> 16px
-        <input type="radio" value="18px" name="fontsize" /> 18px
-        <input type="radio" value="20px" name="fontsize" /> 20px
+        <div onClick={this.onChangeValue}>
+        <input type="button" value="16px" name="fontsize"/>
+        <input type="button" value="18px" name="fontsize" />
+        <input type="button" value="20px" name="fontsize" />
       </div>
       </Modal>
      </main>
@@ -65,6 +69,7 @@ const Modal = ({ handleClose, show, children }) => {
 
 const Data = () =>{
   const [data, setItem] = React.useState([]);
+  const [style, setStyle] = React.useState("sixteenpx");
 
 
   React.useEffect(() => {
@@ -80,7 +85,7 @@ const Data = () =>{
       });
   }, []);
   return(
-    <div>
+    <div className={style}>
       {data.map((item) => (
 
         <div key={item.ID}><UnsafeComponent html={item.Text}/></div>
