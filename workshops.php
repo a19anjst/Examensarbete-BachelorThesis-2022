@@ -35,7 +35,7 @@
     <div class="textblock" id="textblock1">
         <div class="content_second">
           <div class="content_dir1">
-            <div id="reactstyle"></div>
+            <div id="reactstyling"></div>
           </div>
         </div>
 
@@ -43,7 +43,7 @@
     </div>
     <script type="text/babel">
     ReactDOM.render(<ReactApp/>, document.getElementById("reactapp"));
-    ReactDOM.render(<ReactStyling/>, document.getElementById("reactstyle"));
+    ReactDOM.render(<Data/>, document.getElementById("reactstyling"));
     </script>
   </body>
 </html>
