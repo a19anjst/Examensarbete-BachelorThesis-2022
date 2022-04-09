@@ -63,34 +63,39 @@ const Modal = ({ handleClose, show, children }) => {
   );
 };
 
+const Data = () =>{
+  const [data, setItem] = React.useState([]);
 
+
+  React.useEffect(() => {
+    fetch("../Examensarbete-BachelorThesis-2022/dbtext.php")
+      .then(res => res.json())
+      .then(
+        (result)=>{
+        setItem(result);
+        }
+      )
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+  return(
+    <div>
+      {data.map((item) => (
+        <div key={item.ID}>{item.Text}</div>
+      ))}
+    </div>
+  )
+}
 class ReactStyling extends React.Component {
   constructor() {
     super();
     this.state = {
-      texttable: [
-          {Name: "", Info: ""}]
     };
   }
-  async getData(){
-  fetch("../Examensarbete-BachelorThesis-2022/dbtext.php", {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-  })
-  .then((response) => response.json()).then(data => {
-      this.setState({texttable:data})
-  });
-  }
-
   render() {
-
   return (
-    <table>
-        <tbody>
-            {this.state.texttable.map(tag => <tr key={tag.Name}><td>{tag.Info}</td></tr>)}
-        </tbody>
-    </table>
+    <Data/>
   );
 }
-
 }
