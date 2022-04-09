@@ -82,15 +82,20 @@ const Data = () =>{
   return(
     <div>
       {data.map((item) => (
-        <div key={item.ID}>{item.Text}</div>
+
+        <div key={item.ID}><UnsafeComponent html={item.Text}/></div>
       ))}
     </div>
   )
+}
+function UnsafeComponent({ html }) {
+  return <div dangerouslySetInnerHTML={{ __html: html }} />;
 }
 class ReactStyling extends React.Component {
   constructor() {
     super();
     this.state = {
+
     };
   }
   render() {
