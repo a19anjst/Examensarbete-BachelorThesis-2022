@@ -1,7 +1,11 @@
+const fontColor = {
+  white: {
 
-const TwentyPx = {
-  fontsize: "20px"
-}
+  },
+  black: {
+
+  },
+};
 
 class ReactApp extends React.Component {
   constructor() {
@@ -13,11 +17,16 @@ class ReactApp extends React.Component {
     this.hideModal = this.hideModal.bind(this);
 
     this.handleClick = this.handleClick.bind(this);
-    this.onChangeValue = this.onChangeValue.bind(this);
+    this.onChangeValueSize = this.onChangeValueSize.bind(this);
+    this.onChangeValueColor = this.onChangeValueColor.bind(this);
    }
 
-   onChangeValue(event) {
+   onChangeValueSize(event) {
      alert('Fontsize: ' + event.target.value);
+     event.preventDefault();
+   }
+   onChangeValueColor(event) {
+     alert('Color: ' + event.target.value);
      event.preventDefault();
    }
 
@@ -43,11 +52,16 @@ class ReactApp extends React.Component {
       </button>
       <Modal show={this.state.show} handleClose={this.hideModal}>
          {this.props.children}
-        <p id="reacttool_title">Textstorlek: </p>
-        <div onClick={this.onChangeValue}>
+        <p className="reacttool_title">Textstorlek: </p>
+        <div onClick={this.onChangeValueSize}>
         <input type="button" value="16px" name="fontsize"/>
         <input type="button" value="18px" name="fontsize" />
         <input type="button" value="20px" name="fontsize" />
+      </div>
+      <p className="reacttool_title">Färgsättning: </p>
+      <div onClick={this.onChangeValueColor}>
+      <input type="button" value="white" name="fontsize"/>
+      <input type="button" value="black" name="fontsize" />
       </div>
       </Modal>
      </main>
