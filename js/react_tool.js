@@ -45,7 +45,6 @@ class ReactApp extends React.Component {
         <input type="radio" value="18px" name="fontsize" /> 18px
         <input type="radio" value="20px" name="fontsize" /> 20px
       </div>
-        <ReactStyling></ReactStyling>
       </Modal>
      </main>
   );
@@ -69,13 +68,28 @@ class ReactStyling extends React.Component {
   constructor() {
     super();
     this.state = {
-
+      texttable: [
+          {Name: "", Info: ""}]
     };
   }
+  async getData(){
+  fetch("../Examensarbete-BachelorThesis-2022/dbtext.php", {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+  })
+  .then((response) => response.json()).then(data => {
+      this.setState({texttable:data})
+  });
+  }
+
   render() {
 
   return (
-    <p>Hello</p>
+    <table>
+        <tbody>
+            {this.state.texttable.map(tag => <tr key={tag.Name}><td>{tag.Info}</td></tr>)}
+        </tbody>
+    </table>
   );
 }
 

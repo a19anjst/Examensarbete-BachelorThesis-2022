@@ -1,10 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-require_once 'db_connection.php';
-$result = mysqli_query($conn,"SELECT* FROM texttable order by RAND() LIMIT 1");
-$row= mysqli_fetch_array($result);
- ?>
 <html lang="sv">
   <head>
   <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
@@ -41,9 +35,7 @@ $row= mysqli_fetch_array($result);
     <div class="textblock" id="textblock1">
         <div class="content_second">
           <div class="content_dir1">
-            <?php
-              echo $row[2];
-            ?>
+            <div id="reactstyle"></div>
           </div>
         </div>
 
@@ -51,6 +43,7 @@ $row= mysqli_fetch_array($result);
     </div>
     <script type="text/babel">
     ReactDOM.render(<ReactApp/>, document.getElementById("reactapp"));
+    ReactDOM.render(<ReactStyling/>, document.getElementById("reactstyle"));
     </script>
   </body>
 </html>
