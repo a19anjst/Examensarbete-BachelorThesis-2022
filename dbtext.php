@@ -1,7 +1,7 @@
 <?php
 include_once ('db_connection.php');
 
-$sql = "SELECT* FROM texttable order by RAND() LIMIT 1";
+$sql = 'SELECT* FROM texttable order by RAND() LIMIT 1';
 
 $result = mysqli_query($conn,$sql);
 $json_array= array();

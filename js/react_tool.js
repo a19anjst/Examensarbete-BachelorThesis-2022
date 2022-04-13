@@ -86,13 +86,16 @@ const Data = () =>{
 
 
   React.useEffect(() => {
-    const fetchJSON = async () => {
-      const response = await fetch("../Examensarbete-BachelorThesis-2022/dbtext.php");
-      let json = await response.json();
-      setJsonData(json);
-    };
-
-    fetchJSON();
+    fetch("../Examensarbete-BachelorThesis-2022/dbtext.php")
+      .then(res => res.json())
+      .then(
+        (result)=>{
+        setItem(result);
+        }
+      )
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
   return(
     <div>
