@@ -32,18 +32,9 @@
       <script type="text/babel" src="JS/react_tool.js"></script>
       <div id="reactapp"></div>
     </div>
-    <div class="textblock" id="textblock1">
-        <div class="content_second">
-          <div class="content_dir1">
-            <div id="reactstyling"></div>
-          </div>
-        </div>
-
-    </div>
     </div>
     <script type="text/babel">
     ReactDOM.render(<ReactApp/>, document.getElementById("reactapp"));
-    ReactDOM.render(<Data/>, document.getElementById("reactstyling"));
     </script>
   </body>
 </html>

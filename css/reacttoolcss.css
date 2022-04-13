@@ -1,6 +1,3 @@
-#reactapp{
-  float: left;
-}
 
 .modal-main {
   position:absolute;
@@ -58,21 +55,4 @@
 }
 .reacttool_title{
   font-size: 20px;
-}
-.twentypx {
-  font-size: 20px;
-}
-.eighteenypx {
-  font-size: 18px;
-}
-.sixteenpx{
-  font-size: 16px;
-}
-.white{
-  background: white;
-  color: black;
-}
-.black{
-  background: black
-  color: white;
 }

@@ -1,33 +1,66 @@
-const fontColor = {
-  white: {
-
-  },
-  black: {
-
-  },
+const dark = {
+  backgroundColor: "#000000",
+  color: "#FFFFFF"
 };
-
+const light = {
+  backgroundColor: "#FFFFFF",
+  color: "#000000"
+};
+const sixteenpx ={
+  fontSize: "16px"
+};
+const eighteenpx = {
+  fontSize: "18px"
+};
+const twentypx = {
+  fontSize: "20px"
+};
+const twentytwopx = {
+  fontSize: "22px"
+};
 class ReactApp extends React.Component {
   constructor() {
     super();
     this.state = {
-      show: false
+      show: false,
+      color: light,
+      fontsize: sixteenpx
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
 
     this.handleClick = this.handleClick.bind(this);
-    this.onChangeValueSize = this.onChangeValueSize.bind(this);
-    this.onChangeValueColor = this.onChangeValueColor.bind(this);
+    this.onChangeValue16px = this.onChangeValue16px.bind(this);
+    this.onChangeValue18px = this.onChangeValue18px.bind(this);
+    this.onChangeValue20px = this.onChangeValue20px.bind(this);
+    this.onChangeValue22px = this.onChangeValue22px.bind(this);
+    this.onChangeValueWhite = this.onChangeValueWhite.bind(this);
+    this.onChangeValueBlack = this.onChangeValueBlack.bind(this);
    }
 
-   onChangeValueSize(event) {
-     alert('Fontsize: ' + event.target.value);
-     event.preventDefault();
+   onChangeValue16px(event) {
+     const newFontSize = this.state.fontsize = sixteenpx;
+     this.setState({ fontsize: newFontSize })
    }
-   onChangeValueColor(event) {
-     alert('Color: ' + event.target.value);
-     event.preventDefault();
+   onChangeValue18px(event) {
+     const newFontSize = this.state.fontsize = eighteenpx;
+     this.setState({ fontsize: newFontSize })
+   }
+   onChangeValue20px(event) {
+     const newFontSize = this.state.fontsize = twentypx;
+     this.setState({ fontsize: newFontSize })
+   }
+   onChangeValue22px(event) {
+     const newFontSize = this.state.fontsize = twentytwopx;
+     this.setState({ fontsize: newFontSize })
+   }
+   onChangeValueWhite(event) {
+     const newColor = this.state.color = light;
+     this.setState({ color: newColor })
+   }
+   onChangeValueBlack(event) {
+     const newColor = this.state.color = dark;
+     this.setState({ color: newColor })
    }
 
   handleClick() {
@@ -53,17 +86,22 @@ class ReactApp extends React.Component {
       <Modal show={this.state.show} handleClose={this.hideModal}>
          {this.props.children}
         <p className="reacttool_title">Textstorlek: </p>
-        <div onClick={this.onChangeValueSize}>
-        <input type="button" value="16px" name="fontsize"/>
-        <input type="button" value="18px" name="fontsize" />
-        <input type="button" value="20px" name="fontsize" />
-      </div>
+        <input type="button" value="16px" name="fontsize" onClick={this.onChangeValue16px}/>
+        <input type="button" value="18px" name="fontsize" onClick={this.onChangeValue18px}/>
+        <input type="button" value="20px" name="fontsize" onClick={this.onChangeValue20px}/>
+        <input type="button" value="22px" name="fontsize" onClick={this.onChangeValue22px}/>
       <p className="reacttool_title">Färgsättning: </p>
-      <div onClick={this.onChangeValueColor}>
-      <input type="button" value="white" name="fontsize"/>
-      <input type="button" value="black" name="fontsize" />
-      </div>
+      <input type="button" value="Lightmode" name="fontsize" onClick={this.onChangeValueWhite}/>
+      <input type="button" value="Darkmode" name="fontsize" onClick={this.onChangeValueBlack} />
       </Modal>
+      <div className="textblock" id="textblock1">
+          <div className="content_second"style={this.state.color}>
+            <div className="content_dir1" style={this.state.fontsize}>
+            <Data/>
+            </div>
+          </div>
+
+      </div>
      </main>
   );
 }
