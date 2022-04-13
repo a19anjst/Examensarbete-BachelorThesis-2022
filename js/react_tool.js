@@ -92,6 +92,10 @@ class ReactApp extends React.Component {
 
    onChangeValueClear(event) {
      localStorage.clear();
+     const newColor = this.state.color = light;
+     this.setState({ color: newColor })
+     const newFontSize = this.state.fontsize = sixteenpx;
+     this.setState({ fontsize: newFontSize })
    }
 
   handleClick() {
