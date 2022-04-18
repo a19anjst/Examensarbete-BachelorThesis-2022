@@ -11,6 +11,8 @@
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Chilanka&display=swap');
     </style>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/JS_shared.js"></script>
   </head>
   <body>
@@ -27,35 +29,18 @@
     <div class="textblock" id="textblock1">
         <div class="content_second">
           <div class="content_dir1">
-            <h1>Lorem ipsum dolor sit amet</h1>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p></div>
-            <div><p>Lorem ipsum dolor sit amet:</p></div>
-            <ul>
-                <li class="boxlist">Lorem ipsum dolor</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-            </ul>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p></div>
-            <h3>Lorem ipsum dolor sit amet</h3>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur:</p></div>
-            <ul>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                <li class="boxlist">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-            </ul>
-            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p></div>
-            <div><p>Lorem ipsum dolor sit amet</p></div>
+<div id="app">
+  <div v-for="info in infos" :key="info.id">
+    {{ info.Text }}
+</div>
+</div>
+</div>
           </div>
         </div>
 
     </div>
     </div>
+
+    <script src="js/vue_tool.js"></script>
   </body>
 </html>
