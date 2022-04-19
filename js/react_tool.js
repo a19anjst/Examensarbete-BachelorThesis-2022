@@ -91,7 +91,8 @@ class ReactApp extends React.Component {
    }
 
    onChangeValueClear(event) {
-     localStorage.clear();
+     localStorage.removeItem('color');
+     localStorage.removeItem('fontsize');
      const newColor = this.state.color = light;
      this.setState({ color: newColor })
      const newFontSize = this.state.fontsize = sixteenpx;
@@ -132,7 +133,7 @@ class ReactApp extends React.Component {
       <input type="button" value="Darkmode" name="fontsize" id="darkmode" className="button" onClick={this.onChangeValueBlack} style={dark}/>
       <input type="button" value="Färg" name="fontsize" id="colorful" className="button" onClick={this.onChangeValueColorful} style={colorful}/>
       <input type="button" value="Skarp" name="fontsize" id="bright" className="button" onClick={this.onChangeValueBright} style={bright}/>
-      <div><input type="button" value="Clear" name="Reset" className="button" onClick={this.onChangeValueClear} style={{margin: "10px"}}/></div>
+      <div><input type="button" value="Clear" name="Reset" id="clear" className="button" onClick={this.onChangeValueClear} style={{margin: "10px"}}/></div>
       </Modal>
       <div className="textblock" id="textblock1">
           <div className="content_second" style={getcolor}>
