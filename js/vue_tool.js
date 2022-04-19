@@ -30,6 +30,20 @@ Vue.createApp({
       var storeFont = text.style.fontSize;
       localStorage.setItem('storedFontSize', storeFont)
     },
+    storeFontSize20: function(){
+      const text =
+      document.querySelector('#text')
+      text.style.fontSize = "20px";
+      var storeFont = text.style.fontSize;
+      localStorage.setItem('storedFontSize', storeFont)
+    },
+    storeFontSize22: function(){
+      const text =
+      document.querySelector('#text')
+      text.style.fontSize = "22px";
+      var storeFont = text.style.fontSize;
+      localStorage.setItem('storedFontSize', storeFont)
+    },
 
           changeColorWhite: function () {
               const box =
@@ -77,6 +91,13 @@ Vue.createApp({
           },
           clearColor: function(){
             localStorage.clear();
+            const box =
+              document.querySelector('#box')
+              const text =
+              document.querySelector('#text')  
+            box.style.background = "#ffffff"
+            box.style.color = "#000000"
+            text.style.fontSize = "16px";
           }
         },
   created() {
