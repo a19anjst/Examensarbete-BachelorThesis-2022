@@ -29,18 +29,36 @@
     <div id="textfield">
       <div id="app">
         <button @click="active = !active" :aria-pressed="active ? 'true' : 'false'" id="tooglebutton">Ändra text utseende</button>
-    <span :class="{ big: !active }"><div class="modal-main">Hello its me whatever</div></span>
+    <span :class="{ big: !active }">
+      <div class="modal-main">
+        <div class="title_vue">Textstorlek: </div>
+          <button v-on:click="storeFontSize16" id="sixteenpx" class="stylebutton">16px</button>
+          <button v-on:click="storeFontSize18" id="eighteenpx" class="stylebutton">18px</button>
+          <button v-on:click="storeFontSize20" id="twentypx" class="stylebutton">20px</button>
+          <button v-on:click="storeFontSize22" id="twentytwopx" class="stylebutton">22px</button>
+        <div class="title_vue">Färgsättning: </div>
+          <button v-on:click="changeColorWhite" class="stylebutton" id="lightmode">Lightmode</button>
+          <button v-on:click="changeColorBlack" class="stylebutton" id="darkmode">Darkmode</button>
+          <button v-on:click="changeColorFul" class="stylebutton" id="colorful">Färg</button>
+          <button v-on:click="changeColorBright" class="stylebutton" id="bright">Skarp</button>
+        <div>
+          <button v-on:click="clearColor" class="stylebutton">Clear</button>
+        </div>
+      </div>
+    </span>
     <div class="textblock" id="textblock1">
-        <div class="content_second">
+
+        <div class="content_second" id='box' v-bind:style="styles">
+
 
 
   <div v-for="info in infos" :key="info.id">
+    <p v-bind:style="font" id="text">
       <span v-html="info.Text"></span>
+      </p>
 </div>
-
 </div>
           </div>
-        </div>
 
     </div>
     </div>

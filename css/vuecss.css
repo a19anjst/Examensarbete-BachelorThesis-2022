@@ -25,3 +25,39 @@ span{
   padding: 10px;
   border-radius: 5px;
 }
+#sixteenpx{
+  font-size: 16px;
+}
+#eighteenpx{
+  font-size: 18px;
+}
+#twentypx{
+  font-size: 20px;
+}
+#twentytwopx{
+  font-size: 22px;
+}
+.stylebutton{
+  border-radius: 5px;
+  margin: 3px;
+  font-size: 18px;
+}
+.title_vue{
+  font-size: 20px;
+}
+#lightmode{
+  background-color: #ffffff;
+  color: #000000;
+}
+#darkmode{
+  background-color: #000000;
+  color: #ffffff;
+}
+#colorful{
+  background-color: #FFFACD;
+  color: #4B0082;
+}
+#bright{
+  background-color: #FFFF00;
+  color: #EE82EE;
+}
