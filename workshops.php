@@ -4,6 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/CSS_shared.css">
+  <link rel="stylesheet" href="css/vuecss.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
@@ -26,14 +27,17 @@
       <span id="titletext">lorem ipsum</span>
     </div>
     <div id="textfield">
+      <div id="app">
+        <button @click="active = !active" :aria-pressed="active ? 'true' : 'false'" id="tooglebutton">Toggle me</button>
+    <div :class="{ big: !active }"><p id="ptag">Hello its me whatever</p></div>
     <div class="textblock" id="textblock1">
         <div class="content_second">
-          <div class="content_dir1">
-<div id="app">
+
+
   <div v-for="info in infos" :key="info.id">
-    {{ info.Text }}
+      <span v-html="info.Text"></span>
 </div>
-</div>
+
 </div>
           </div>
         </div>

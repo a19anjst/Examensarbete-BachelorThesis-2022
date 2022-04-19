@@ -1,7 +1,10 @@
+
+
 Vue.createApp({
     data() {
       return {
-        infos: null
+        infos: null,
+        active: false
     }
   },
   created() {

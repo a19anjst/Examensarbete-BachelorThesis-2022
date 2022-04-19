@@ -1,0 +1,20 @@
+.big {
+  display: none;
+}
+
+div{
+  display: block;
+}
+#tooglebutton{
+  position: absolute;
+  margin: 5px;
+  background: #D84E5A;
+  color: white;
+  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  border: solid white 1px;
+}
+#ptag{
+  position: relative;
+}
