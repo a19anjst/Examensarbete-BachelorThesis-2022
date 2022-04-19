@@ -28,8 +28,8 @@
     </div>
     <div id="textfield">
       <div id="app">
-        <button @click="active = !active" :aria-pressed="active ? 'true' : 'false'" id="tooglebutton">Toggle me</button>
-    <div :class="{ big: !active }"><p id="ptag">Hello its me whatever</p></div>
+        <button @click="active = !active" :aria-pressed="active ? 'true' : 'false'" id="tooglebutton">Ändra text utseende</button>
+    <span :class="{ big: !active }"><div class="modal-main">Hello its me whatever</div></span>
     <div class="textblock" id="textblock1">
         <div class="content_second">
 
