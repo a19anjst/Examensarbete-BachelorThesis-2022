@@ -90,11 +90,13 @@ Vue.createApp({
               localStorage.setItem('storedBgColor', userBgColor);
           },
           clearColor: function(){
-            localStorage.clear();
+            localStorage.removeItem('storedColor');
+            localStorage.removeItem('storedBgColor');
+            localStorage.removeItem('storedFontSize');
             const box =
               document.querySelector('#box')
               const text =
-              document.querySelector('#text')  
+              document.querySelector('#text')
             box.style.background = "#ffffff"
             box.style.color = "#000000"
             text.style.fontSize = "16px";

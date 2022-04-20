@@ -31,7 +31,7 @@
       <h1>lorem ipsum</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
       <ul>
-          <a href="workshops.php" class="homelinks"><li class="boxlist">lorem ipsum</li></a>
+          <a href="workshops.php" class="homelinks" id="testlink"><li class="boxlist">lorem ipsum</li></a>
           <a href="advice.php" class="homelinks"><li class="boxlist">lorem ipsum</li></a>
           <a href="equality.php" class="homelinks"><li class="boxlist">lorem ipsum</li></a>
           <a href="cooperation.php" class="homelinks"><li class="boxlist">lorem ipsum</li></a>

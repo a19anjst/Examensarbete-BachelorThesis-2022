@@ -42,7 +42,7 @@
           <button v-on:click="changeColorFul" class="stylebutton" id="colorful">Färg</button>
           <button v-on:click="changeColorBright" class="stylebutton" id="bright">Skarp</button>
         <div>
-          <button v-on:click="clearColor" class="stylebutton">Clear</button>
+          <button v-on:click="clearColor" class="stylebutton" id="clear">Clear</button>
         </div>
       </div>
     </span>
