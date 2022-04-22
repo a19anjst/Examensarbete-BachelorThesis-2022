@@ -169,6 +169,7 @@ const Data = () =>{
       .then(
         (result)=>{
         setItem(result);
+        //console.log(date)
         }
       )
       .catch((err) => {
@@ -187,3 +188,4 @@ const Data = () =>{
 function UnsafeComponent({ html }) {
   return <div dangerouslySetInnerHTML={{ __html: html }} />;
 }
+//
