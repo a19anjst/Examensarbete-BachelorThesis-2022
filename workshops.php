@@ -34,11 +34,16 @@
     </div>
     </div>
     <script type="text/babel">
-    document.addEventListener('DOMContentLoaded', () => {
-      ReactDOM.render(
-        <ReactApp /> , document.getElementById("reactapp")
-      );
-    })
+    this.setState({
+  loading: true
+});
+require.ensure([], (require) => {
+   require('react_tool.js');
+   this.setState({
+     loading: false
+   });
+})
+    ReactDOM.render(<ReactApp/>, document.getElementById("reactapp"));
     </script>
   </body>
 </html>

@@ -188,17 +188,3 @@ const Data = () =>{
 function UnsafeComponent({ html }) {
   return <div dangerouslySetInnerHTML={{ __html: html }} />;
 }
-
-class RootComponent extends React.Component {
-
-  componentDidMount () {
-    window.runStartupTasks();
-  }
-
-  render () {
-    return (
-      <div></div>
-    )
-  }
-}
-//
