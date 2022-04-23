@@ -109,11 +109,16 @@ Vue.createApp({
       .then(data => (this.infos = data));
   },
   mounted() {
-    const changeBtn = document.querySelector('#tooglebutton');
-    changeBtn.click();
-    const colorBtn = document.querySelector('#colorful');
-    colorBtn.click();
+
+  },
+  updated(){
     const blackBtn = document.querySelector('#darkmode');
     blackBtn.click();
+    const twentyBtn = document.querySelector('#twentypx');
+    twentyBtn.click();
+    let present = performance.now();
+    localStorage.setItem("present", present);
+    const homeBtn = document.querySelector('#logo-menu-landscape');
+    homeBtn.click();
   }
 }).mount('#app')
