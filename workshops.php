@@ -34,15 +34,6 @@
     </div>
     </div>
     <script type="text/babel">
-    this.setState({
-  loading: true
-});
-require.ensure([], (require) => {
-   require('react_tool.js');
-   this.setState({
-     loading: false
-   });
-})
     ReactDOM.render(<ReactApp/>, document.getElementById("reactapp"));
     </script>
   </body>

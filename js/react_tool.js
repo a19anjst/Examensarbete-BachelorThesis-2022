@@ -32,7 +32,7 @@ class ReactApp extends React.Component {
     this.state = {
       show: false,
       color: light,
-      fontsize: sixteenpx
+      fontsize: sixteenpx,
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
@@ -113,6 +113,9 @@ class ReactApp extends React.Component {
   hideModal = () => {
     this.setState({ show: false });
   };
+  componentDidMount() {
+    console.log('Finished!')
+ }
   render() {
     const getcolor = JSON.parse(localStorage.getItem('color'))
     const getfontsize = JSON.parse(localStorage.getItem('fontsize'))
