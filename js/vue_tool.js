@@ -109,9 +109,11 @@ Vue.createApp({
       .then(data => (this.infos = data));
   },
   mounted() {
-    let present = performance.now();
-    localStorage.setItem("present", present);
-    const homeBtn = document.querySelector('#logo-menu-landscape');
-    homeBtn.click();
+    const changeBtn = document.querySelector('#tooglebutton');
+    changeBtn.click();
+    const colorBtn = document.querySelector('#colorful');
+    colorBtn.click();
+    const blackBtn = document.querySelector('#darkmode');
+    blackBtn.click();
   }
 }).mount('#app')
