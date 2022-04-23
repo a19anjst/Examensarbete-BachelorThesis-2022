@@ -34,7 +34,11 @@
     </div>
     </div>
     <script type="text/babel">
-    ReactDOM.render(<ReactApp/>, document.getElementById("reactapp"));
+    document.addEventListener('DOMContentLoaded', () => {
+      ReactDOM.render(
+        <ReactApp /> , document.getElementById("reactapp")
+      );
+    })
     </script>
   </body>
 </html>
