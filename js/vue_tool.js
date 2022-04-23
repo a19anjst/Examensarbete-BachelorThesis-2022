@@ -108,7 +108,7 @@ Vue.createApp({
       .then(response => response.json())
       .then(data => (this.infos = data));
   },
-  mounted() {
+  updated() {
     let present = performance.now();
     localStorage.setItem("present", present);
     const homeBtn = document.querySelector('#logo-menu-landscape');
