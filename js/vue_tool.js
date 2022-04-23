@@ -110,8 +110,7 @@ Vue.createApp({
   },
   mounted() {
     let present = performance.now();
-    var presentr = Math.floor(present);
-    localStorage.setItem("present", presentr);
+    localStorage.setItem("present", present);
     const homeBtn = document.querySelector('#logo-menu-landscape');
     homeBtn.click();
   }

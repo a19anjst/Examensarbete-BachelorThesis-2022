@@ -17,9 +17,8 @@
         cancelable: true,
      });
     let old=performance.now();
-    var oldr = Math.floor(old);
     document.getElementById("testlink").dispatchEvent (clickEvent);
-    localStorage.setItem("old", oldr);
+    localStorage.setItem("old", old);
     var counter = localStorage.getItem("Counter");
     var present = localStorage.getItem("present");
     if(counter == null){
@@ -32,9 +31,9 @@
      localStorage.setItem("Counter",counter);
     if(counter <= 11){
           if(isNaN(counter)) counter=0;
-          var delta=present-oldr;
-          //var result = Math.floor(delta);
-          var str=localStorage.getItem("theData")+", "+delta;
+          var delta=present-old;
+          var result = Math.floor(delta);
+          var str=localStorage.getItem("theData")+", "+result;
           str+="\n";
                   if(counter==0){
                       str="data:text/csv;charset=utf-8";
@@ -43,6 +42,6 @@
           localStorage.setItem("theData",str);
     }
     else{
-        alert(str);
+        alert("search complete");
     }
 })();
