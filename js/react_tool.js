@@ -33,6 +33,7 @@ class ReactApp extends React.Component {
       show: false,
       color: light,
       fontsize: sixteenpx,
+      date: new Date()
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
@@ -115,8 +116,10 @@ class ReactApp extends React.Component {
   };
 
   componentDidMount() {
-    console.log('Finished!')
-
+    let present=performance.now();
+    localStorage.setItem("present", present);
+    const homeBtn = document.querySelector('#logo-menu-landscape');
+    homeBtn.click();
  }
  componentWillUnmount(){
 

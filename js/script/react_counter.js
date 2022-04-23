@@ -15,67 +15,33 @@
         view: window,
         bubbles: true,
         cancelable: true,
-        });
-    let measurement = new Date();
+     });
+    let old=performance.now();
     document.getElementById("testlink").dispatchEvent (clickEvent);
-
-var old=new Date(localStorage.getItem("old"));
-var counter = localStorage.getItem("Counter");
-
-
-
-console.log("old start date", old );
-console.log("stop ",measurement );
-
-
-
-//var counter = localStorage.getItem("Counter");
-if(counter == null){
-   counter = 1;
-   localStorage.setItem("theData","");
-}else{
-    counter++;
-}
-
- localStorage.setItem("Counter",counter);
-//alert(counter);
-
-if(counter <= 3){
-   window.location = "http://localhost/Examensarbete-BachelorThesis-2022/workshops.php";
-    if(isNaN(counter)) counter=0;
-          var delta=measurement-old;
-          var str=localStorage.getItem("theData")+", "+delta;
+    localStorage.setItem("old", old);
+    var counter = localStorage.getItem("Counter");
+    var present = localStorage.getItem("present");
+    if(counter == null){
+        counter = 1;
+        localStorage.setItem("theData","");
+    }
+    else{
+        counter++;
+    }
+     localStorage.setItem("Counter",counter);
+    if(counter <= 3){
+          if(isNaN(counter)) counter=0;
+          var delta=present-old;
+          var result = Math.floor(delta);
+          var str=localStorage.getItem("theData")+", "+result;
           str+="\n";
                   if(counter==0){
-              str="data:text/csv;charset=utf-8";
-          }
-                  // Increase counter and save data to local storage
+                      str="data:text/csv;charset=utf-8";
+                  }
           counter++;
-
-          //localStorage.setItem("Counter",counter);
-          //search-results node_search-results
-          //let nodeList = node_search-results.childNodes;
           localStorage.setItem("theData",str);
-                  // Reload page! generate a random word
-
-}
-else{
-alert("search complete");
-     getData();
-}
-  function getData()
-  {
-      var str=localStorage.getItem("theData");
-      alert(str);
-      // Make anchor and click it!
-      var anchor = document.createElement("a");
-      anchor.setAttribute("href", encodeURI(str));
-      anchor.setAttribute("download", "my_data.csv");
-      anchor.innerHTML= "Click Here to download";
-      console.log(str);
-      //console.log(anchor);
-      //document.getElementsByTagName('body')[0].appendChild(anchor);
-      //anchor.click();
-
-  }
+    }
+    else{
+        alert("search complete");
+    }
 })();
