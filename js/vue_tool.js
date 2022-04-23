@@ -10,7 +10,7 @@ Vue.createApp({
       },
         font:{
           'font-size': localStorage.getItem('storedFontSize')
-        }
+        },
     }
 
   },
@@ -108,4 +108,11 @@ Vue.createApp({
       .then(response => response.json())
       .then(data => (this.infos = data));
   },
-  }).mount('#app')
+  mounted() {
+    let present = performance.now();
+    var presentr = Math.floor(present);
+    localStorage.setItem("present", presentr);
+    const homeBtn = document.querySelector('#logo-menu-landscape');
+    homeBtn.click();
+  }
+}).mount('#app')
