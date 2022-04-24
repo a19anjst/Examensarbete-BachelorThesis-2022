@@ -19,7 +19,7 @@ if(hcounter == null){
         hcounter++;
     }
      localStorage.setItem("hCounter",hcounter);
-   if(hcounter <= 11){
+   if(hcounter <= 101){
     var clickEvent = new MouseEvent('click', {
         view: window,
         bubbles: true,
