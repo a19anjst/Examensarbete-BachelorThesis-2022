@@ -115,6 +115,12 @@ class ReactApp extends React.Component {
     this.setState({ show: false });
   };
 
+  componentDidMount() {
+    console.log("Mounted");
+ }
+ componentWillUnmount(){
+
+ }
 
   render() {
     const getcolor = JSON.parse(localStorage.getItem('color'))
