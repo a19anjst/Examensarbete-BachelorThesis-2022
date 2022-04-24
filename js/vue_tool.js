@@ -110,15 +110,7 @@ Vue.createApp({
   },
   mounted() {
 
-  },
-  updated(){
-    const blackBtn = document.querySelector('#darkmode');
-    blackBtn.click();
-    const twentyBtn = document.querySelector('#twentypx');
-    twentyBtn.click();
-    let present = performance.now();
-    localStorage.setItem("present", present);
-    const homeBtn = document.querySelector('#logo-menu-landscape');
-    homeBtn.click();
+
+
   }
 }).mount('#app')
