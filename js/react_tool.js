@@ -115,15 +115,6 @@ class ReactApp extends React.Component {
     this.setState({ show: false });
   };
 
-  componentDidMount() {
-    let present=performance.now();
-    localStorage.setItem("present", present);
-    const homeBtn = document.querySelector('#logo-menu-landscape');
-    homeBtn.click();
- }
- componentWillUnmount(){
-
- }
 
   render() {
     const getcolor = JSON.parse(localStorage.getItem('color'))
