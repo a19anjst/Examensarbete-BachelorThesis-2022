@@ -11,37 +11,25 @@
 
 (function() {
     'use strict';
+        var hcounter = localStorage.getItem("hCounter");
+if(hcounter == null){
+        hcounter = 1;
+    }
+    else{
+        hcounter++;
+    }
+     localStorage.setItem("hCounter",hcounter);
+   if(hcounter <= 10){
     var clickEvent = new MouseEvent('click', {
         view: window,
         bubbles: true,
         cancelable: true,
      });
-    let old=performance.now();
     document.getElementById("testlink").dispatchEvent (clickEvent);
+let old = performance.now();
     localStorage.setItem("old", old);
-    var counter = localStorage.getItem("Counter");
-    var present = localStorage.getItem("present");
-    if(counter == null){
-        counter = 1;
-        localStorage.setItem("theData","");
-    }
+   }
     else{
-        counter++;
-    }
-     localStorage.setItem("Counter",counter);
-    if(counter <= 3){
-          if(isNaN(counter)) counter=0;
-          var delta=present-old;
-          var result = Math.floor(delta);
-          var str=localStorage.getItem("theData")+", "+result;
-          str+="\n";
-                  if(counter==0){
-                      str="data:text/csv;charset=utf-8";
-                  }
-          counter++;
-          localStorage.setItem("theData",str);
-    }
-    else{
-        alert("search complete");
+        alert("Measuring done!");
     }
 })();

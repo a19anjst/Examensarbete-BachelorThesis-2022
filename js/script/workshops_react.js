@@ -11,7 +11,36 @@
 
 (function() {
     'use strict';
-    const homeBtn = document.querySelector('#logo-menu-landscape');
+
+    var counter = localStorage.getItem("Counter");
+if(counter == null){
+        counter = 1;
+    }
+    else{
+        counter++;
+    }
+     localStorage.setItem("Counter",counter);
+   if(counter <= 10){
+
+        location.reload("#reactapp");
+    }
+
+    else{
+     let present = performance.now();
+    localStorage.setItem("present", present);
+        var old = localStorage.getItem("old");
+        var delta=present-old;
+          var result = Math.floor(delta);
+          var str=localStorage.getItem("theData")+", "+result;
+        str+="\n";
+                  if(counter==0){
+                      str="data:text/csv;charset=utf-8";
+                  }
+         localStorage.setItem("theData",str);
+        counter=0;
+        localStorage.setItem("Counter", counter);
+         const homeBtn = document.querySelector('#logo-menu-landscape');
     homeBtn.click();
-    // Your code here...
+    }
+
 })();
