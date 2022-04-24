@@ -20,7 +20,7 @@ if(counter == null){
         counter++;
     }
      localStorage.setItem("Counter",counter);
-   if(counter <= 11){
+   if(counter <= 30){
 
         location.reload("#app");
     }
@@ -30,8 +30,8 @@ if(counter == null){
     localStorage.setItem("present", present);
         var old = localStorage.getItem("old");
         var delta=present-old;
-          var result = Math.floor(delta);
-          var str=localStorage.getItem("theData")+", "+result;
+        /*var result = Math.floor(delta);*/
+        var str=localStorage.getItem("theData")+", "+delta;
         str+="\n";
                   if(counter==0){
                       str="data:text/csv;charset=utf-8";
@@ -39,8 +39,8 @@ if(counter == null){
          localStorage.setItem("theData",str);
         counter=0;
         localStorage.setItem("Counter", counter);
-         const homeBtn = document.querySelector('#logo-menu-landscape');
-    homeBtn.click();
+        const homeBtn = document.querySelector('#logo-menu-landscape');
+        homeBtn.click();
     }
 
 })();
