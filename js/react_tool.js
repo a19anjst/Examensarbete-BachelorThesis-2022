@@ -116,7 +116,6 @@ class ReactApp extends React.Component {
   };
 
   componentDidMount() {
-    console.log("Mounted");
  }
  componentWillUnmount(){
 
