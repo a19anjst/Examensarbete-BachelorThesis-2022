@@ -26,7 +26,7 @@ if(counter == null){
     }
 
     else{
-     let present = performance.now();
+    let present = Date.now();
     localStorage.setItem("present", present);
         var old = localStorage.getItem("old");
         var delta=present-old;
@@ -36,7 +36,7 @@ if(counter == null){
                   if(counter==0){
                       str="data:text/csv;charset=utf-8";
                   }
-         localStorage.setItem("theData",str);
+        localStorage.setItem("theData",str);
         counter=0;
         localStorage.setItem("Counter", counter);
         const homeBtn = document.querySelector('#logo-menu-landscape');
