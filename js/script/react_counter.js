@@ -19,14 +19,14 @@ if(hcounter == null){
         hcounter++;
     }
      localStorage.setItem("hCounter",hcounter);
-   if(hcounter <= 10){
+   if(hcounter <= 101){
     var clickEvent = new MouseEvent('click', {
         view: window,
         bubbles: true,
         cancelable: true,
      });
     document.getElementById("testlink").dispatchEvent (clickEvent);
-let old = performance.now();
+let old = Date.now();
     localStorage.setItem("old", old);
    }
     else{

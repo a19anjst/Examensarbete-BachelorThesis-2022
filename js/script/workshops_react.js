@@ -5,7 +5,7 @@
 // @description  try to take over the world!
 // @author       You
 // @match        http://localhost/Examensarbete-BachelorThesis-2022/workshops.php
-// @icon         https://www.google.com/s2/favicons?sz=64&domain=learn.co
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        none
 // ==/UserScript==
 
@@ -20,27 +20,27 @@ if(counter == null){
         counter++;
     }
      localStorage.setItem("Counter",counter);
-   if(counter <= 10){
+   if(counter <= 30){
 
         location.reload("#reactapp");
     }
 
     else{
-     let present = performance.now();
+    let present = Date.now();
     localStorage.setItem("present", present);
         var old = localStorage.getItem("old");
         var delta=present-old;
-          var result = Math.floor(delta);
-          var str=localStorage.getItem("theData")+", "+result;
+        /*var result = Math.floor(delta);*/
+        var str=localStorage.getItem("theData")+", "+delta;
         str+="\n";
                   if(counter==0){
                       str="data:text/csv;charset=utf-8";
                   }
-         localStorage.setItem("theData",str);
+        localStorage.setItem("theData",str);
         counter=0;
         localStorage.setItem("Counter", counter);
-         const homeBtn = document.querySelector('#logo-menu-landscape');
-    homeBtn.click();
+        const homeBtn = document.querySelector('#logo-menu-landscape');
+        homeBtn.click();
     }
 
 })();
