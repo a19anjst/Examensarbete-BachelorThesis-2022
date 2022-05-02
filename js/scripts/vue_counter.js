@@ -26,7 +26,7 @@ if(hcounter == null){
         cancelable: true,
      });
     document.getElementById("testlink").dispatchEvent (clickEvent);
-let old = performance.now();
+let old = Date.now();
     localStorage.setItem("old", old);
    }
     else{
