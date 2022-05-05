@@ -102,12 +102,6 @@ Vue.createApp({
             text.style.fontSize = "16px";
           }
         },
-  created() {
-    // Simple GET request using fetch
-    fetch("dbtext.php")
-      .then(response => response.json())
-      .then(data => (this.infos = data));
-  },
   mounted() {
 
 
